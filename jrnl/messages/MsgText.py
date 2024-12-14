@@ -182,7 +182,11 @@ class MsgText(Enum):
         --config-override at the command line
         """,
         ja="""
-        
+        指定された {config_linewrap} の行折り返し値は、ジャーナル {journal} に
+        設定された時間形式でタイムスタンプを表示するには、{columns} 列分小さすぎます。
+
+        このエラーを回避するには、構成ファイルで行折り返し値を少なくとも {columns} 大きく
+        指定するか、コマンド ラインで --config-override を使用して下さい。
         """,
         )
 
@@ -195,6 +199,10 @@ class MsgText(Enum):
         this journal to the new journal, then encrypt the new journal.
         """,
         ja="""
+        ジャーナル {journal_name} は {journal_type} ジャーナルであるため暗号化できません。
+
+        暗号化するには、ファイルを参照する新しいジャーナルを作成し、このジャーナルを新しい
+        ジャーナルにエクスポートしてから、新しいジャーナルを暗号化して下さい。
         """,
         )
 
@@ -204,17 +212,19 @@ class MsgText(Enum):
         of journal can't be encrypted. Please fix your config file.
         """,
         ja="""
+        ジャーナル "{journal_name}" の構成では 'encrypt' が true に設定されていますが、
+        このタイプのジャーナルは暗号化できません。構成ファイルを修正してください。
         """,
         )
 
     DecryptionFailedGeneric = T(
         en="The decryption of journal data failed.",
-        ja="",
+        ja="ジャーナル データの復号化に失敗しました。",
         )
 
     KeyboardInterruptMsg = T(
         en="Aborted by user",
-        ja="",
+        ja="ユーザーによって中止しました",
         )
 
     CantReadTemplate = T(
@@ -226,17 +236,23 @@ class MsgText(Enum):
          * {actual_template_path}
         """,
         ja="""
+        テンプレート ファイル {template_path} が見つかりません。
+
+        次のパスがチェックされました:
+        * {jrnl_template_dir}{template_path}
+        * {actual_template_path}
         """,
         )
 
     NoNamedJournal = T(
         en="No '{journal_name}' journal configured\n{journals}",
-        ja="",
+        ja="'{journal_name}' ジャーナルが設定されていません\n{journals}",
         )
+    # is that \n{journals} supposed to be there?
 
     DoesNotExist = T(
         en="{name} does not exist",
-        ja="",
+        ja="{name} が存在しません",
         )
 
     # --- Journal status ---#
@@ -253,10 +269,12 @@ class MsgText(Enum):
         en="{num} entry added",
         ja="",
         )
+
     JournalCountModifiedSingular = T(
         en="{num} entry modified",
         ja="",
         )
+    
     JournalCountDeletedSingular = T(
         en="{num} entry deleted",
         ja="",
@@ -266,10 +284,12 @@ class MsgText(Enum):
         en="{num} entries added",
         ja="",
         )
+
     JournalCountModifiedPlural = T(
         en="{num} entries modified",
         ja="",
         )
+
     JournalCountDeletedPlural = T(
         en="{num} entries deleted",
         ja="",
@@ -279,22 +299,27 @@ class MsgText(Enum):
         en="Journal '{journal_name}' created at {filename}",
         ja="",
         )
+
     DirectoryCreated = T(
         en="Directory {directory_name} created",
         ja="",
         )
+
     JournalEncrypted = T(
         en="Journal will be encrypted",
         ja="",
         )
+
     JournalEncryptedTo = T(
         en="Journal encrypted to {path}",
         ja="",
         )
+
     JournalDecryptedTo = T(
         en="Journal decrypted to {path}",
         ja="",
         )
+
     BackupCreated = T(
         en="Created a backup at {filename}",
         ja="",
