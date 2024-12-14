@@ -258,71 +258,71 @@ class MsgText(Enum):
     # --- Journal status ---#
     JournalNotSaved = T(
         en="Entry NOT saved to journal",
-        ja="",
+        ja="エントリがジャーナルに保存されませんでした",
         )
     JournalEntryAdded = T(
         en="Entry added to {journal_name} journal",
-        ja="",
+        ja="エントリが {journal_name} ジャーナルに追加されました",
         )
 
     JournalCountAddedSingular = T(
         en="{num} entry added",
-        ja="",
+        ja="{num} 個のエントリが追加されました",
         )
 
     JournalCountModifiedSingular = T(
         en="{num} entry modified",
-        ja="",
+        ja="{num} 個のエントリが変更されました",
         )
     
     JournalCountDeletedSingular = T(
         en="{num} entry deleted",
-        ja="",
+        ja="{num} 個のエントリが削除されました",
         )
 
     JournalCountAddedPlural = T(
         en="{num} entries added",
-        ja="",
+        ja="{num} 個のエントリが追加されました",
         )
 
     JournalCountModifiedPlural = T(
         en="{num} entries modified",
-        ja="",
+        ja="{num} 個のエントリが変更されました",
         )
 
     JournalCountDeletedPlural = T(
         en="{num} entries deleted",
-        ja="",
+        ja="{num} 個のエントリが削除されました",
         )
 
     JournalCreated = T(
         en="Journal '{journal_name}' created at {filename}",
-        ja="",
+        ja="ジャーナル '{journal_name}' が {filename} に作成されました",
         )
 
     DirectoryCreated = T(
         en="Directory {directory_name} created",
-        ja="",
+        ja="ディレクトリ {directory_name} が作成されました",
         )
 
     JournalEncrypted = T(
         en="Journal will be encrypted",
-        ja="",
+        ja="ジャーナルは暗号化されます",
         )
 
     JournalEncryptedTo = T(
         en="Journal encrypted to {path}",
-        ja="",
+        ja="ジャーナルが {path} に暗号化されました",
         )
 
     JournalDecryptedTo = T(
         en="Journal decrypted to {path}",
-        ja="",
+        ja="ジャーナルが {path} に復号されました",
         )
 
     BackupCreated = T(
         en="Created a backup at {filename}",
-        ja="",
+        ja="{filename} にバックアップが作成されました",
         )
 
     # --- Editor ---#
