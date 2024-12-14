@@ -332,15 +332,19 @@ class MsgText(Enum):
         To finish writing, press {how_to_quit} on a blank line.
         """,
         ja="""
+        エントリ書き込み中
+        書き込みを終了するには、空白行で {how_to_quit} を押して下さい。
         """,
         )
+
     HowToQuitWindows = T(
         en="Ctrl+z and then Enter",
-        ja="",
+        ja="Ctrl+z を押してから Enter を押して下さい",
         )
+    
     HowToQuitLinux = T(
         en="Ctrl+d",
-        ja="",
+        ja="Ctrl+d",
         )
 
     EditorMisconfigured = T(
@@ -351,6 +355,10 @@ class MsgText(Enum):
             editor: '{editor_key}'
         """,
         ja="""
+        このファイルまたはディレクトリはありません: '{editor_key}'
+
+        構成ファイルの 'editor' キーにエラーがないか確認してください:
+            エディター: '{editor_key}'
         """,
         )
 
@@ -358,13 +366,20 @@ class MsgText(Enum):
         en="""
         There is no editor configured
 
-        To use the --edit option, please specify an editor your config file:
+        To use the --edit option, please specify an editor in your config file:
             {config_file}
 
         For examples of how to configure an external editor, see:
             https://jrnl.sh/en/stable/external-editors/
         """,
         ja="""
+        エディターが設定されていません
+
+        --edit オプションを使用するには、構成ファイルでエディターを指定してください:
+            {config_file}
+
+        外部エディタを設定する例については、次を見てください:
+            https://jrnl.sh/en/stable/external-editors/
         """,
         )
 
@@ -377,12 +392,17 @@ class MsgText(Enum):
         To delete all entries, use the --delete option.
         """,
         ja="""
+        エディタからテキストを受信しませんでした。すべてのエントリを削除しようとしましたか?
+
+        これは少し極端なため、操作はキャンセルされました。
+
+        すべてのエントリを削除するには、--delete オプションを使用して下さい。
         """,
         )
 
     NoEditsReceived = T(
         en="No edits to save, because nothing was changed",
-        ja="",
+        ja="変更がなかったため、保存する編集はありません",
         )
 
     NoTextReceived = T(
@@ -390,13 +410,16 @@ class MsgText(Enum):
         No entry to save, because no text was received
         """,
         ja="""
+        テキストが受信されてないため、保存するエントリがありません
         """,
         )
+
     NoChangesToTemplate = T(
         en="""
         No entry to save, because the template was not changed
         """,
         ja="""
+        テンプレートが変更されていないため、保存するエントリがありません
         """,
         )
 
