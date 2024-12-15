@@ -186,7 +186,7 @@ class MsgText(Enum):
         設定された時間形式でタイムスタンプを表示するには、{columns} 列分小さすぎます。
 
         このエラーを回避するには、構成ファイルで行折り返し値を少なくとも {columns} 大きく
-        指定するか、コマンド ラインで --config-override を使用して下さい。
+        指定するか、コマンド ラインで --config-override を使用してください。
         """,
         )
 
@@ -202,7 +202,7 @@ class MsgText(Enum):
         ジャーナル {journal_name} は {journal_type} ジャーナルであるため暗号化できません。
 
         暗号化するには、ファイルを参照する新しいジャーナルを作成し、このジャーナルを新しい
-        ジャーナルにエクスポートしてから、新しいジャーナルを暗号化して下さい。
+        ジャーナルにエクスポートしてから、新しいジャーナルを暗号化してください。
         """,
         )
 
@@ -333,13 +333,13 @@ class MsgText(Enum):
         """,
         ja="""
         エントリ書き込み中
-        書き込みを終了するには、空白行で {how_to_quit} を押して下さい。
+        書き込みを終了するには、空白行で {how_to_quit} を押してください。
         """,
         )
 
     HowToQuitWindows = T(
         en="Ctrl+z and then Enter",
-        ja="Ctrl+z を押してから Enter を押して下さい",
+        ja="Ctrl+z を押してから Enter を押してください",
         )
     
     HowToQuitLinux = T(
@@ -396,7 +396,7 @@ class MsgText(Enum):
 
         これは少し極端なため、操作はキャンセルされました。
 
-        すべてのエントリを削除するには、--delete オプションを使用して下さい。
+        すべてのエントリを削除するには、--delete オプションを使用してください。
         """,
         )
 
@@ -433,22 +433,27 @@ class MsgText(Enum):
         https://github.com/jrnl-org/jrnl/issues/new?title=JournalFailedUpgrade
         """,
         ja="""
+        次のジャーナルはアップグレードに失敗しました:
+        {failed_journals}
+
+        この問題について、次の　URL　でお知らせください:
+        https://github.com/jrnl-org/jrnl/issues/new?title=JournalFailedUpgrade
         """,
         )
 
     UpgradeAborted = T(
         en="jrnl was NOT upgraded",
-        ja="",
+        ja="jrnl はアップグレードされませんでした",
         )
 
     AbortingUpgrade = T(
         en="Aborting upgrade...",
-        ja="",
+        ja="アップグレードを中止しています...",
         )
 
     ImportAborted = T(
         en="Entries were NOT imported",
-        ja="",
+        ja="エントリがインポートされませんでした",
         )
 
     JournalsToUpgrade = T(
@@ -457,6 +462,8 @@ class MsgText(Enum):
 
         """,
         ja="""
+        次のジャーナルは jrnl {バージョン} にアップグレードされます:
+
         """,
         )
 
@@ -466,6 +473,8 @@ class MsgText(Enum):
 
         """,
         ja="""
+        次のジャーナルは変更されません:
+
         """,
         )
 
@@ -474,12 +483,13 @@ class MsgText(Enum):
         Upgrading '{journal_name}' journal stored in {path}...
         """,
         ja="""
+        {path} に保存されている '{journal_name}' ジャーナルをアップグレードしています...
         """,
         )
 
     UpgradingConfig = T(
         en="Upgrading config...",
-        ja="",
+        ja="構成をアップグレードしています...",
         )
 
     PaddedJournalName = "{journal_name:{pad}} -> {path}"
@@ -491,6 +501,8 @@ class MsgText(Enum):
             {config_file}
         """,
         ja="""
+        指定されたパスに代替構成ファイルが見つかりません:
+            {config_file}
         """,
         )
 
@@ -499,6 +511,7 @@ class MsgText(Enum):
         Configuration updated to newest version at {config_path}
         """,
         ja="""
+        {config_path} で構成が最新バージョンに更新されました
         """,
         )
 
@@ -510,40 +523,45 @@ class MsgText(Enum):
         {error_message}
         """,
         ja="""
+        構成ファイル内に重複するキーが少なくとも 1 つあります。
+
+        詳細:
+        {error_message}
         """,
         )
+
     # --- Password --- #
     Password = T(
         en="Password:",
-        ja="",
+        ja="パスワード:",
         )
     PasswordFirstEntry = T(
         en="Enter password for journal '{journal_name}': ",
-        ja="",
+        ja="ジャーナル '{journal_name}' のパスワードを入力してください: ",
         )
     PasswordConfirmEntry = T(
         en="Enter password again: ",
-        ja="",
+        ja="パスワードをもう一度入力してくださいください: ",
         )
     PasswordMaxTriesExceeded = T(
         en="Too many attempts with wrong password",
-        ja="",
+        ja="間違ったパスワードで試行回数が多すぎます",
         )
     PasswordCanNotBeEmpty = T(
         en="Password can't be empty!",
-        ja="",
+        ja="パスワードを空にすることはできません！",
         )
     PasswordDidNotMatch = T(
         en="Passwords did not match, please try again",
-        ja="",
+        ja="パスワードが一致しませんでした、もう一度お試しください",
         )
     WrongPasswordTryAgain = T(
         en="Wrong password, try again",
-        ja="",
+        ja="パスワードが間違っています、やり直してください",
         )
     PasswordStoreInKeychain = T(
         en="Do you want to store the password in your keychain?",
-        ja="",
+        ja="パスワードをキーチェーンに保存しますか？",
         )
 
     # --- Search --- #
