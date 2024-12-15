@@ -1,7 +1,7 @@
 # Copyright © 2012-2023 jrnl contributors
 # License: https://www.gnu.org/licenses/gpl-3.0.html
 
-# format example, delete later
+# localization format example
 # OneLineMessage = T(
 #     en="something",
 #     ja="何か",
@@ -56,12 +56,10 @@ class MsgText(Enum):
         続行する場合は、古いバージョンの jrnl ではジャーナルを使用できなくなります。
         """,
         )
-
     AllDoneUpgrade = T(
         en="We're all done here and you can start enjoying jrnl 2",
         ja="これですべて完了です、jrnl 2 をお楽しみください",
         )
-    
     InstallComplete = T(
         en="""
         jrnl configuration created at {config_path}
@@ -139,7 +137,6 @@ class MsgText(Enum):
         https://github.com/jrnl-org/jrnl/issues/new/choose
         """,
         )
-
     ConfigDirectoryIsFile = T(
         en="""
         Problem with config file!
@@ -159,7 +156,6 @@ class MsgText(Enum):
         
         """,
         )
-
     CantParseConfigFile = T(
         en="""
         Unable to parse config file at:
@@ -170,7 +166,6 @@ class MsgText(Enum):
         {config_path}
         """,
         )
-
     LineWrapTooSmallForDateFormat = T(
         en="""
         The provided linewrap value of {config_linewrap} is too small by
@@ -189,7 +184,6 @@ class MsgText(Enum):
         指定するか、コマンド ラインで --config-override を使用してください。
         """,
         )
-
     CannotEncryptJournalType = T(
         en="""
         The journal {journal_name} can't be encrypted because it is a
@@ -205,7 +199,6 @@ class MsgText(Enum):
         ジャーナルにエクスポートしてから、新しいジャーナルを暗号化してください。
         """,
         )
-
     ConfigEncryptedForUnencryptableJournalType = T(
         en="""
         The config for journal "{journal_name}" has 'encrypt' set to true, but this type
@@ -216,17 +209,14 @@ class MsgText(Enum):
         このタイプのジャーナルは暗号化できません。構成ファイルを修正してください。
         """,
         )
-
     DecryptionFailedGeneric = T(
         en="The decryption of journal data failed.",
         ja="ジャーナル データの復号化に失敗しました。",
         )
-
     KeyboardInterruptMsg = T(
         en="Aborted by user",
         ja="ユーザーによって中止しました",
         )
-
     CantReadTemplate = T(
         en="""
         Unable to find a template file {template_path}.
@@ -243,13 +233,11 @@ class MsgText(Enum):
         * {actual_template_path}
         """,
         )
-
     NoNamedJournal = T(
         en="No '{journal_name}' journal configured\n{journals}",
         ja="'{journal_name}' ジャーナルが設定されていません\n{journals}",
         )
     # is that \n{journals} supposed to be there?
-
     DoesNotExist = T(
         en="{name} does not exist",
         ja="{name} が存在しません",
@@ -264,62 +252,50 @@ class MsgText(Enum):
         en="Entry added to {journal_name} journal",
         ja="エントリが {journal_name} ジャーナルに追加されました",
         )
-
     JournalCountAddedSingular = T(
         en="{num} entry added",
         ja="{num} 個のエントリが追加されました",
         )
-
     JournalCountModifiedSingular = T(
         en="{num} entry modified",
         ja="{num} 個のエントリが変更されました",
         )
-    
     JournalCountDeletedSingular = T(
         en="{num} entry deleted",
         ja="{num} 個のエントリが削除されました",
         )
-
     JournalCountAddedPlural = T(
         en="{num} entries added",
         ja="{num} 個のエントリが追加されました",
         )
-
     JournalCountModifiedPlural = T(
         en="{num} entries modified",
         ja="{num} 個のエントリが変更されました",
         )
-
     JournalCountDeletedPlural = T(
         en="{num} entries deleted",
         ja="{num} 個のエントリが削除されました",
         )
-
     JournalCreated = T(
         en="Journal '{journal_name}' created at {filename}",
         ja="ジャーナル '{journal_name}' が {filename} に作成されました",
         )
-
     DirectoryCreated = T(
         en="Directory {directory_name} created",
         ja="ディレクトリ {directory_name} が作成されました",
         )
-
     JournalEncrypted = T(
         en="Journal will be encrypted",
         ja="ジャーナルは暗号化されます",
         )
-
     JournalEncryptedTo = T(
         en="Journal encrypted to {path}",
         ja="ジャーナルが {path} に暗号化されました",
         )
-
     JournalDecryptedTo = T(
         en="Journal decrypted to {path}",
         ja="ジャーナルが {path} に復号されました",
         )
-
     BackupCreated = T(
         en="Created a backup at {filename}",
         ja="{filename} にバックアップが作成されました",
@@ -341,12 +317,10 @@ class MsgText(Enum):
         en="Ctrl+z and then Enter",
         ja="Ctrl+z を押してから Enter を押してください",
         )
-    
     HowToQuitLinux = T(
         en="Ctrl+d",
         ja="Ctrl+d",
         )
-
     EditorMisconfigured = T(
         en="""
         No such file or directory: '{editor_key}'
@@ -361,7 +335,6 @@ class MsgText(Enum):
             エディター: '{editor_key}'
         """,
         )
-
     EditorNotConfigured = T(
         en="""
         There is no editor configured
@@ -382,7 +355,6 @@ class MsgText(Enum):
             https://jrnl.sh/en/stable/external-editors/
         """,
         )
-
     NoEditsReceivedJournalNotDeleted = T(
         en="""
         No text received from editor. Were you trying to delete all the entries?
@@ -399,12 +371,10 @@ class MsgText(Enum):
         すべてのエントリを削除するには、--delete オプションを使用してください。
         """,
         )
-
     NoEditsReceived = T(
         en="No edits to save, because nothing was changed",
         ja="変更がなかったため、保存する編集はありません",
         )
-
     NoTextReceived = T(
         en="""
         No entry to save, because no text was received
@@ -413,7 +383,6 @@ class MsgText(Enum):
         テキストが受信されてないため、保存するエントリがありません
         """,
         )
-
     NoChangesToTemplate = T(
         en="""
         No entry to save, because the template was not changed
@@ -440,22 +409,18 @@ class MsgText(Enum):
         https://github.com/jrnl-org/jrnl/issues/new?title=JournalFailedUpgrade
         """,
         )
-
     UpgradeAborted = T(
         en="jrnl was NOT upgraded",
         ja="jrnl はアップグレードされませんでした",
         )
-
     AbortingUpgrade = T(
         en="Aborting upgrade...",
         ja="アップグレードを中止しています...",
         )
-
     ImportAborted = T(
         en="Entries were NOT imported",
         ja="エントリがインポートされませんでした",
         )
-
     JournalsToUpgrade = T(
         en="""
         The following journals will be upgraded to jrnl {version}:
@@ -466,7 +431,6 @@ class MsgText(Enum):
 
         """,
         )
-
     JournalsToIgnore = T(
         en="""
         The following journals will not be touched:
@@ -477,7 +441,6 @@ class MsgText(Enum):
 
         """,
         )
-
     UpgradingJournal = T(
         en="""
         Upgrading '{journal_name}' journal stored in {path}...
@@ -486,12 +449,10 @@ class MsgText(Enum):
         {path} に保存されている '{journal_name}' ジャーナルをアップグレードしています...
         """,
         )
-
     UpgradingConfig = T(
         en="Upgrading config...",
         ja="構成をアップグレードしています...",
         )
-
     PaddedJournalName = "{journal_name:{pad}} -> {path}"
 
     # -- Config --- #
@@ -505,7 +466,6 @@ class MsgText(Enum):
             {config_file}
         """,
         )
-
     ConfigUpdated = T(
         en="""
         Configuration updated to newest version at {config_path}
@@ -514,7 +474,6 @@ class MsgText(Enum):
         {config_path} で構成が最新バージョンに更新されました
         """,
         )
-
     ConfigDoubleKeys = T(
         en="""
         There is at least one duplicate key in your configuration file.
@@ -625,6 +584,7 @@ class MsgText(Enum):
         {count} 個が {journal_name} ジャーナルにインポートされました
         """,
         )
+    
     # --- Color --- #
     InvalidColor = T(
         en="{key} set to invalid color: {color}",
