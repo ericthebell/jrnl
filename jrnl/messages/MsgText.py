@@ -570,6 +570,7 @@ class MsgText(Enum):
         No entries to delete, because the search returned no results
         """,
         ja="""
+        検索で結果が返されなかったため、削除するエントリはありません
         """,
         )
     NothingToModify = T(
@@ -577,19 +578,20 @@ class MsgText(Enum):
         No entries to modify, because the search returned no results
         """,
         ja="""
+        検索で結果が返されなかったため、変更するエントリはありません
         """,
         )
     NoEntriesFound = T(
         en="no entries found",
-        ja="",
+        ja="エントリが見つかりません",
         )
     EntryFoundCountSingular = T(
         en="{num} entry found",
-        ja="",
+        ja="{num} 個のエントリが見つかりました",
         )
     EntryFoundCountPlural = T(
         en="{num} entries found",
-        ja="",
+        ja="{num} 個のエントリが見つかりました",
         )
 
     # --- Formats --- #
@@ -598,6 +600,7 @@ class MsgText(Enum):
         Headings increased past H6 on export - {date} {title}
         """,
         ja="""
+        エクスポート時に見出しが増えて H6 を超えました - {date} {title}
         """,
         )
     YamlMustBeDirectory = T(
@@ -605,11 +608,12 @@ class MsgText(Enum):
         YAML export must be to a directory, not a single file
         """,
         ja="""
+        YAML エクスポートは、単一のファイルではなく、ディレクトリに行う必要があります
         """,
         )
     JournalExportedTo = T(
         en="Journal exported to {path}",
-        ja="",
+        ja="ジャーナルが {path} にエプスポートされました",
         )
 
     # --- Import --- #
@@ -618,12 +622,13 @@ class MsgText(Enum):
         {count} imported to {journal_name} journal
         """,
         ja="""
+        {count} 個が {journal_name} ジャーナルにインポートされました
         """,
         )
     # --- Color --- #
     InvalidColor = T(
         en="{key} set to invalid color: {color}",
-        ja="",
+        ja="{key} が無効な色に設定されています: {color}",
         )
 
     # --- Keyring --- #
@@ -635,11 +640,15 @@ class MsgText(Enum):
           https://pypi.org/project/keyring/
         """,
         ja="""
+        キーリングのバックエンドが見つかりません。
+
+        サポートされているバックエンドのいずれかをここからインストールしてください:
+          https://pypi.org/project/keyring/
         """,
         )
     KeyringRetrievalFailure = T(
         en="Failed to retrieve keyring",
-        ja="",
+        ja="キーリングの取得に失敗しました",
         )
 
     # --- Deprecation --- #
@@ -649,5 +658,7 @@ class MsgText(Enum):
         Please use {new_cmd} instead.
         """,
         ja="""
+        コマンド {old_cmd} は非推奨であり、まもなく jrnl から削除されます。
+        代わりに {new_cmd} を使用してください。
         """,
         )
